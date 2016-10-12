@@ -2,6 +2,6 @@
 
 namespace VikStd {
 
-	VikStd::TErrorLog StdErrorLog;
+    VikStd::TErrorLog StdErrorLog;
 
 }

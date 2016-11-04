@@ -15,3 +15,5 @@
 *.db
 *.filters
 *.opendb
+/output
+/test/log.txt

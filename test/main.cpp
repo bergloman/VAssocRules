@@ -1,12 +1,12 @@
 // TestAR.cpp : Defines the entry point for the console application.
 //
 
-#include "str.h"
-#include "ds.h"
-#include "stdvik.h"
-#include "assocrules.h"
-#include "foil.h"
-#include "clusterfuncs.h"
+#include <str.h>
+#include <ds.h>
+#include <stdvik.h>
+#include <assocrules.h>
+#include <foil.h>
+#include <clusterfuncs.h>
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,7 +49,7 @@ void NormalRunAssocRules(VikApriori::TAssocRules &ar, VikStd::TProperties &prop)
 
 int main(int argc, char* argv[]) {
     // first prepare some utility objects
-    VikStd::TOutFile outfile("c:\\temp\\assoc_rules_log.txt");
+    VikStd::TOutFile outfile("log.txt");
     VikStd::TOutStd outstd;
     VikStd::TOutDouble out2(&outfile, &outstd);
     VikStd::TCommon common(&out2);
@@ -57,12 +57,12 @@ int main(int argc, char* argv[]) {
 
     // load data from input file
     VikStd::TDataTable tab;
-    VikStd::TStr temp_s("c:\\temp\\data.txt");
+    VikStd::TStr temp_s("test.csv");
     tab.LoadFromFileX(temp_s);
     VikApriori::TAssocRules ar(&common, &tab);
 
     // determine target attribute
-    VikStd::TStr TargetName = "A86";
+    VikStd::TStr TargetName = "A35";
     int target = tab.FindAttrWithName(TargetName);
     if (target < 0)
         throw VikStd::TExc(VikStd::TStr("Incompatible data file and parameter Target. No such attribute: ") + TargetName);
@@ -75,7 +75,7 @@ int main(int argc, char* argv[]) {
     VikStd::TProp prop;
 
     prop.m_c1 = "OutputFile";
-    prop.m_c2.m_Str = "c:\\temp\\res.txt";
+    prop.m_c2.m_Str = "res.txt";
     prop.m_c2.m_Type = VikStd::VTStr;
     props.Add(prop);
 
@@ -139,7 +139,7 @@ int main(int argc, char* argv[]) {
     foil_obj.Output(&out2, temp_s, &tab);
     */
 
-    VikStd::TStr out_file_name("c:\\temp\\res.txt");
+    VikStd::TStr out_file_name("res.txt");
     VikClustering::DoClustering(temp_s, out_file_name, 10, 5, out2);
     return 0;
 }

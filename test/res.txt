@@ -1,0 +1,15 @@
+<clustering>
+	<ClusterAttr-list>
+		<ClusterAttr> <AttrType>d</AttrType> <weight>1.000000</weight> <name>A33</name> <dvalues>0</dvalues> <mean>0</mean> <dev>0</dev></ClusterAttr>
+		<ClusterAttr> <AttrType>d</AttrType> <weight>1.000000</weight> <name>A34</name> <dvalues>0 1</dvalues> <mean>0</mean> <dev>0</dev></ClusterAttr>
+		<ClusterAttr> <AttrType>d</AttrType> <weight>1.000000</weight> <name>A35</name> <dvalues>D1 D2 D3 D4</dvalues> <mean>0</mean> <dev>0</dev></ClusterAttr>
+	</ClusterAttr-list>
+
+	<Cluster-list>
+		<Cluster><values>1.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000</values><members>5</members></Cluster>
+		<Cluster><values>1.000000 1.000000 0.000000 0.344828 0.344828 0.310345 0.000000</values><members>29</members></Cluster>
+		<Cluster><values>1.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000</values><members>8</members></Cluster>
+		<Cluster><values>1.000000 0.000000 1.000000 0.000000 0.000000 1.000000 0.000000</values><members>1</members></Cluster>
+		<Cluster><values>1.000000 0.000000 1.000000 0.000000 0.000000 0.000000 1.000000</values><members>4</members></Cluster>
+	</Cluster-list>
+</clustering>
